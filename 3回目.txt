@@ -1,0 +1,60 @@
+度数分布票
+
+
+
+sample(1:4,size=3,replace=T)
+
+n <- 125
+q0 <-sample(c(1:4, 9), size=n, replace=T,prob=c(.35,.25,.20,.15,.05))
+q0
+class(q0)
+table(q0)
+xtabs(~ q0)
+
+q1 <-sample(c("1　大都市","2　中都市","3　小都市","4　町村","9　不明・無回答"),size=n,replace=T,prob=c(.35,.25,.20,.15,.05))
+class(q1);table(q1)　
+
+q2 <-sample(c("大都市","中都市","小都市","町村","不明・無回答"),size=n,replace=T,prob=c(.35,.25,.20,.15,.05))
+q2;class(q2);table(q2)
+　
+q3 <-factor(q2,levels=c("大都市","中都市","小都市","町村","不明・無回答"))
+q3;class(q3);table(q3)
+　
+q4 <- as.numeric(q3)
+q4;class(q4);table(q4)
+
+table(q4)
+addmargins(table(q4))
+prop.table(table(q4))
+addmargins(prop.table(table(q4)))
+cumsum(table(q4))
+cumsum(prop.table(table(q4)))
+
+freq <- table(q4)
+percent <- prop.table(freq)
+cumfreq <-cumsum(freq)
+cum.pcnt <-cumsum(percent)
+
+freq.table <-cbind("度数"=freq,"累積度数"=cumfreq,"相対度数"=percent,"累積相対度数"=cum.pcnt)
+freq.table
+
+q6 <- q4
+q6[seq(20,120, by=20)] <-NA
+q6
+addmargins(table(q6))
+table(q6, useNA="always")
+addmargins(table(q6, useNA="always"))
+
+freq <-table(q6)
+freqT <-table(q6,useNA="always")
+percent <-prop.table(freq)
+percentT <-prop.table(freqT)
+cumfreq <-cumsum(percent)
+cumfreqT <-cumsum(percentT)
+cum.pcnt <-cumsum(percent)
+cum.pcntT <-cumsum(percentT)
+
+percent <- c(percent,NA)
+cum.pcnt <-c(cum.pcnt,NA)
+
+freq.table <-cbind("度数"=freqT,"累積度数"=cumfreqT,"％"=percentT,"累積％"cum.pcntT,"有効％"percent,"有効累積％"=cum.pcnt)

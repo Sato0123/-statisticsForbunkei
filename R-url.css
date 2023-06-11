@@ -1,0 +1,114 @@
+body{
+    text-align: center;
+    background-image:url(images/white_00039.jpg);
+    
+
+}
+header{
+    text-align: center;
+    position:relative;
+    top:0px;
+    font-size:30px;
+    font-family: 'Yuji Mai', serif;
+    background-color: aquamarine;
+}
+
+.reference{
+    display: flex;
+    justify-content: center;
+    
+}
+
+ul{
+    border: #aaaaaa 3px ridge;
+    border-radius:10px;
+    width:600px;
+    list-style-type:square;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+
+ul li{
+    margin:10px;
+    padding:3px;
+    width:200px;
+    height:30px;
+}
+
+main{
+    width:auto;
+    height:2350px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.LIN{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:auto;
+    height:100px;
+}
+
+.LIN1{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    background-color:#cccccc;
+    width:600px;
+    height:100px;
+    padding:10px;
+    border:double 5px black;
+    border-radius: 10px;
+}
+
+.LIN1 p{
+    display: flex;
+    border:double 4px black;
+    padding:5px;
+    margin:10px;
+    background-color: #ffffcc;
+}
+
+.LIN1 p:hover{
+    background-color: #ffccff;
+}
+
+.LIN1 p:visited{
+    background-color: #aaaaaa;
+}
+
+
+footer{
+    width:auto;
+    background-color: lightgreen;
+    border: #ccffe6 3px double;
+}
+
+#links{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+#links img{
+    margin:10px  30px;
+    border:#aaaaaa 3px double;
+}
+
+#links img:hover{
+    opacity: 0.7;
+}
+
+
+    
+.letter{
+    font-size: 2px;
+    font-weight: 700;
+}
